@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <script>
+
+        function calculate(key) {
+            var cel = "celsius";
+            var fah = "Fahrenheit";
+
+            if (key == 'c') {
+                cel = document.getElementById("degreesCelsius").value;
+                far = (cel * 1.8) + 32;
+
+                if (isNaN(far)){
+                    document.getElementById("degreesFahrenheit").value = "Invalid number"
+                }
+                else {
+                    document.getElementById("degreesFahrenheit").value = far;
+                }
+
+            }
+            else {
+                far = document.getElementById("degreesFahrenheit").value;
+                cel = (far - 32) * 5 / 9;
+
+                document.getElementById("degreesCelsius").value = cel;
+
+                if (isNaN(far)){
+                    document.getElementById("degreesCelsius").value = "Invalid number"
+                }
+                else {
+                    document.getElementById("degreesCelsius").value = far;
+                }
+            }
+
+
+        }
+
+    </script>/
+    <style>
+        h1 {
+        }
+        b1 {
+            font-size: 20px;
+            font-style: normal;
+        }
+        html {
+            background-color: lightblue;
+        }
+        b2 {
+            padding: 4px;
+        }
+        b3 {
+            padding: 4px;
+        }
+        body {
+        }
+        fieldset {
+            background-color: lightskyblue;
+            border: 15px solid red;
+            margin-bottom: 15px;
+            width: 720px;
+        }
+        img {
+            width: 400px;
+            padding: 5px;
+            text-align: left;
+        }
+        img {
+            width: 400px;
+            padding: 5px;
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body>
+
+<fieldset>
+    <div>
+        <h1>Temperature Converter</h1>
+        <b1>Hello! Welcome to our temperature converter! Click here to convert the degrees to either
+            celsius or fahrenheit</b1>
+
+
+    </div>
+
+    <div>
+
+
+        <b2>
+            <form>
+                <input type="text" id="degreesCelsius" name="degrees celsius" required="" onkeyup="calculate('c')">
+                <label for="degreesCelsius"> Degrees Celsius:</label>
+                <br>
+
+            </form>
+        </b2>
+    </div>
+
+    <b3>equals</b3>
+    <br>
+    <br>
+    <div>
+        <b4>
+
+            <form>
+                <input type="text"  id="degreesFahrenheit" name="degrees fahrenheit" required="" onkeyup="calculate('f')">
+                <label for="degreesFahrenheit"> Degrees Fahrenheit:</label>
+                <br>
+
+            </form>
+
+        </b4>
+    </div>
+
+</fieldset>
+
+<img src="https://lh4.ggpht.com/GQ9am5QgpAMco9Lp8kIbwqHwax2MzQlUYxnQZvehAGp1JbxV5O17tS4I-BeGfJfnHcg=w300">
+</body>
+</html>
+
